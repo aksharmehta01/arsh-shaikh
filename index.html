@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Core SEO -->
+<title>Arsh Shaikh | Forensic Intelligence Analyst & Expert Portfolio</title>
+<meta name="description" content="Official portfolio of Arsh Shaikh, Forensic Intelligence Analyst at the Intelligence Bureau. MD in Forensic Medicine (AIIMS Rajkot) specializing in crime scene reconstruction and physical evidence recovery.">
+<meta name="keywords" content="Arsh Shaikh, Arsh Shaikh portfolio, Forensic Expert, Forensic Intelligence Analyst, Intelligence Bureau, MD Forensic Medicine, AIIMS Rajkot, Crime Scene Reconstruction, Trace Evidence Analysis, Pathology Integration">
+<meta name="author" content="Arsh Shaikh">
+<meta name="robots" content="index, follow">
+
+<!-- GEO SEO -->
+<meta name="geo.region" content="IN-GJ">
+<meta name="geo.placename" content="Rajkot">
+<meta name="geo.position" content="22.3039;70.8022">
+<meta name="ICBM" content="22.3039, 70.8022">
+
+<!-- Open Graph / Social Media SEO -->
+<meta property="og:title" content="Arsh Shaikh | Forensic Intelligence Analyst">
+<meta property="og:description" content="Specializing in physical evidence recovery, crime scene reconstruction, and high-level forensic analysis.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://arshshaikh.dev/">
+<meta property="og:image" content="https://arshshaikh.dev/profile.jpeg">
+
+<!-- Twitter Card SEO -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Arsh Shaikh | Forensic Portfolio">
+<meta name="twitter:description" content="Forensic Intelligence Analyst at the Intelligence Bureau. Reconstructing truth from fragments.">
+<meta name="twitter:image" content="https://arshshaikh.dev/profile.jpeg">
+
+<!-- AEO (Answer Engine Optimization) & Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "Person",
+  "name": "Arsh Shaikh",
+  "url": "https://arshshaikh.dev/",
+  "image": "https://arshshaikh.dev/profile.jpeg",
+  "jobTitle": "Forensic Intelligence Analyst",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Intelligence Bureau"
+  },
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "AIIMS Rajkot"
+  },
+  "description": "Forensic Intelligence Analyst specializing in crime scene reconstruction, physical evidence recovery, and high-level forensic analysis.",
+  "knowsAbout": [
+    "Forensic Science",
+    "Crime Scene Reconstruction",
+    "Trace Evidence Analysis",
+    "Pathology Integration",
+    "Forensic Medicine"
+  ]
+}
+</script>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Outfit:wght@300;400;500&family=Space+Mono:wght@400;700&display=swap');
+
+:root {
+  --bg: #0c0b0a;
+  --bg-surface: #141311;
+  --text-main: #EAE7E0;
+  --text-muted: #85837F;
+  --accent: #C99B6A; /* Copper / Muted Gold */
+  --border: rgba(234, 231, 224, 0.1);
+  --font-serif: 'Cormorant Garamond', serif;
+  --font-sans: 'Outfit', sans-serif;
+  --font-mono: 'Space Mono', monospace;
+}
+
+* {
+  margin: 0; padding: 0; box-sizing: border-box;
+}
+
+body.locked {
+  overflow: hidden;
+  height: 100vh;
+  touch-action: none;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  color: var(--text-main);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+.portfolio-container {
+  background-color: var(--bg);
+  margin: 1.5rem;
+  border-radius: 40px;
+  box-shadow: 0 0 60px rgba(0,0,0,0.7);
+  overflow: clip;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+/* Background Grain Texture */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  pointer-events: none;
+  z-index: 999;
+  opacity: 0.25;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Custom Cursor */
+.cursor {
+  position: fixed;
+  top: 0; left: 0;
+  width: 12px; height: 12px;
+  background: var(--accent);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 10000;
+  transition: width 0.2s, height 0.2s, background-color 0.2s;
+  mix-blend-mode: difference;
+}
+.cursor.hovering {
+  width: 40px; height: 40px;
+  background: transparent;
+  border: 1px solid var(--accent);
+}
+
+/* Ribbon Intro */
+#ribbon-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  z-index: 9998;
+  display: flex;
+  flex-direction: column;
+  pointer-events: auto;
+}
+
+.ribbon-half {
+  flex: 1;
+  background-color: #050505;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  transition: transform 1.2s cubic-bezier(0.8, 0, 0.2, 1);
+  border-bottom: 1px solid var(--accent);
+}
+
+.ribbon-half.bottom {
+  align-items: flex-start;
+  border-bottom: none;
+  border-top: 1px solid var(--accent);
+}
+
+.ribbon-text {
+  font-family: var(--font-mono);
+  color: var(--accent);
+  font-size: 0.75rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  animation: breathe 3s infinite ease-in-out;
+}
+
+.ribbon-half.bottom .ribbon-text {
+  margin-bottom: 0; margin-top: 2rem;
+}
+
+.ribbon-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.ribbon-arrow-up {
+  animation: floatUpLock 2.5s infinite ease-in-out;
+}
+.ribbon-arrow-down {
+  animation: floatDownLock 2.5s infinite ease-in-out;
+}
+
+@keyframes floatUpLock {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+@keyframes floatDownLock {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(8px); }
+}
+
+@keyframes breathe {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
+}
+
+#ribbon-overlay.open .ribbon-half.top { transform: translateY(-100%); }
+#ribbon-overlay.open .ribbon-half.bottom { transform: translateY(100%); }
+#ribbon-overlay.open { pointer-events: none; }
+
+/* Layout Grid */
+.layout {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  min-height: 100vh;
+}
+
+/* Side Axis */
+.axis {
+  border-right: 1px solid var(--border);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.axis-text {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  position: sticky;
+  top: 50vh;
+  margin-top: -50px; /* offset for center */
+}
+
+/* Main Content */
+.content {
+  padding: 8rem 4rem;
+  max-width: 1200px;
+}
+
+/* Header & Profile */
+.header-container {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  margin-bottom: 6rem;
+  flex-wrap: wrap;
+}
+.profile-photo {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 28px;
+  border: 1px solid var(--border);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+.profile-photo:hover {
+  transform: scale(1.02) translateY(-4px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.7);
+}
+
+/* Typography & Hero */
+.label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  color: var(--accent);
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.label::before {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 1px;
+  background: var(--accent);
+}
+
+h1 {
+  font-family: var(--font-serif);
+  font-size: clamp(4rem, 12vw, 9rem);
+  font-weight: 300;
+  line-height: 0.85;
+  letter-spacing: -0.02em;
+  margin-bottom: 4rem;
+  margin-left: -5px; /* optical alignment */
+}
+
+.intro {
+  font-size: clamp(1.2rem, 3vw, 2rem);
+  font-weight: 300;
+  color: var(--text-muted);
+  max-width: 800px;
+  line-height: 1.4;
+  margin-bottom: 8rem;
+  margin-left: 20%; /* Asymmetrical alignment */
+}
+
+.intro span {
+  color: var(--text-main);
+  font-style: italic;
+  font-family: var(--font-serif);
+}
+
+/* Sections */
+.section {
+  margin-bottom: 10rem;
+}
+
+.section-header {
+  font-family: var(--font-serif);
+  font-size: 3rem;
+  font-weight: 300;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1rem;
+  margin-bottom: 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.section-header span {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--accent);
+  letter-spacing: 0.2em;
+}
+
+/* Experience / Archive List (Luxury non-templatic) */
+.archive-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.archive-item {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  padding: 3rem 1rem;
+  margin: 0 -1rem;
+  border-bottom: 1px solid var(--border);
+  align-items: start;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 12px;
+}
+
+.archive-item:hover {
+  padding-left: 2.5rem;
+  background: var(--bg-surface);
+  border-bottom-color: transparent;
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+}
+.archive-item:hover .archive-year {
+  color: var(--accent);
+}
+
+.archive-year {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  letter-spacing: 0.1em;
+  transition: color 0.4s ease;
+}
+
+.archive-title {
+  font-family: var(--font-serif);
+  font-size: 2.2rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), color 0.4s ease;
+}
+
+.archive-org {
+  font-size: 1rem;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.archive-desc {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  max-width: 90%;
+  line-height: 1.6;
+}
+
+.archive-item:hover .archive-title {
+  color: var(--accent);
+  font-style: italic;
+  transform: translateX(10px);
+}
+
+/* Methodologies (Asymmetrical Cards) */
+.method-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 2rem;
+}
+
+.method-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  padding: 3rem;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.5s ease;
+}
+.method-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+  border-color: rgba(201, 155, 106, 0.4);
+}
+.method-card:hover .method-num {
+  transform: translateX(10px);
+}
+
+.method-card:nth-child(1) { grid-column: 1 / 8; }
+.method-card:nth-child(2) { grid-column: 7 / 13; margin-top: 4rem; }
+.method-card:nth-child(3) { grid-column: 3 / 10; margin-top: -2rem; z-index: 2; }
+
+.method-num {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--accent);
+  margin-bottom: 2rem;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.method-title {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.method-desc {
+  color: var(--text-muted);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Footer */
+.footer {
+  border-top: 1px solid var(--border);
+  padding: 6rem 4rem;
+  position: relative;
+}
+
+.footer-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.contact-link {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-style: italic;
+  color: var(--text-main);
+  text-decoration: none;
+  transition: color 0.4s ease;
+}
+
+.contact-link:hover {
+  color: var(--accent);
+}
+
+.footer-graphic {
+  position: absolute;
+  right: -5vw;
+  bottom: -10vh;
+  width: 50vw;
+  max-width: 600px;
+  height: auto;
+  opacity: 0.02;
+  color: var(--text-main);
+  pointer-events: none;
+  transform: rotate(-10deg);
+}
+
+.back-to-top {
+  margin-top: 8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  cursor: pointer;
+  color: var(--text-muted);
+  transition: color 0.4s ease;
+  position: relative;
+  z-index: 10;
+}
+.back-to-top svg {
+  animation: floatUp 3s infinite ease-in-out;
+  transition: transform 0.4s ease;
+}
+.back-to-top span {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+.back-to-top:hover {
+  color: var(--accent);
+}
+.back-to-top:hover svg {
+  animation-play-state: paused;
+  transform: translateY(-10px);
+}
+@keyframes floatUp {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Non-Templatic Mobile Design */
+@media (max-width: 900px) {
+  .portfolio-container {
+    margin: 0.5rem;
+    border-radius: 28px;
+  }
+  .layout {
+    display: flex;
+    flex-direction: column;
+  }
+  .axis {
+    display: none; /* Hide margin on mobile */
+  }
+  .content {
+    padding: 6rem 1.5rem;
+  }
+  .profile-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+  }
+  .header-container {
+    gap: 1.5rem;
+  }
+  .intro {
+    margin-left: 0; /* Reset alignment for mobile */
+  }
+  
+  /* Mobile Experience - Safe Vertical Stack */
+  .archive-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .archive-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    background: var(--bg-surface);
+    padding: 2rem;
+    margin: 0;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+  }
+  .archive-item:hover {
+    padding-left: 2rem;
+    background: var(--bg-surface);
+    transform: translateY(-5px);
+  }
+  .archive-desc {
+    max-width: 100%;
+  }
+
+  /* Mobile Methodologies - Clean Column Stack */
+  .method-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .method-card {
+    padding: 2rem;
+    border-radius: 12px;
+  }
+  .method-card:nth-child(n) { 
+    margin: 0; 
+  }
+}
+</style>
+</head>
+<body class="locked">
+
+<!-- Custom Cursor -->
+<div class="cursor" id="cursor"></div>
+
+<!-- Scroll to Unlock Ribbon -->
+<div id="ribbon-overlay">
+  <div class="ribbon-half top">
+    <div class="ribbon-text">
+      <svg class="ribbon-arrow-up" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="12" y1="19" x2="12" y2="5"></line>
+        <polyline points="5 12 12 5 19 12"></polyline>
+      </svg>
+      EVIDENCE FILE 042 // RESTRICTED
+    </div>
+  </div>
+  <div class="ribbon-half bottom">
+    <div class="ribbon-text">
+      SCROLL TO BREAK SEAL
+      <svg class="ribbon-arrow-down" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="12" y1="5" x2="12" y2="19"></line>
+        <polyline points="19 12 12 19 5 12"></polyline>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<div class="portfolio-container">
+<div class="layout">
+  <!-- Decorative Left Margin -->
+  <aside class="axis">
+    <div class="axis-text">ARSH SHAIKH // FORENSIC INTELLIGENCE</div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="content">
+    
+    <header class="header-container reveal">
+      <img src="profile.jpeg" class="profile-photo" alt="Arsh Shaikh" />
+      <div>
+        <div class="label">Forensic Dossier</div>
+        <h1 style="margin-bottom: 0;">Arsh Shaikh</h1>
+      </div>
+    </header>
+
+    <p class="intro reveal">
+      I reconstruct truth from fragments. Specializing in <span>physical evidence recovery</span>, crime scene reconstruction, and high-level forensic analysis. Extracting actionable intelligence from complex crime scenes, leaving no trace unexamined.
+    </p>
+
+    <!-- Operational Archive -->
+    <section class="section">
+      <div class="section-header reveal">
+        <h2>Operational Archive</h2>
+        <span>01</span>
+      </div>
+
+      <div class="archive-list">
+        <!-- Role 1 -->
+        <a href="#" class="archive-item reveal">
+          <div class="archive-year">2025 — PRESENT</div>
+          <div>
+            <h3 class="archive-title">Forensic Intelligence Analyst</h3>
+            <div class="archive-org">Intelligence Bureau</div>
+          </div>
+          <p class="archive-desc">Conducting advanced forensic intelligence, analyzing physical trace evidence, and synthesizing multi-source forensic data for national security operations. Leading deep-dive crime scene investigations.</p>
+        </a>
+
+        <!-- Role 2 -->
+        <a href="#" class="archive-item reveal">
+          <div class="archive-year">2023 — 2025</div>
+          <div>
+            <h3 class="archive-title">Forensic Expert</h3>
+            <div class="archive-org">Criminal Investigation Dept.</div>
+          </div>
+          <p class="archive-desc">Spearheaded physical evidence recovery and crime scene analysis for high-profile homicide cases. Utilized advanced blood spatter analysis and trace evidence collection to secure physical evidence that led to successful convictions.</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- Academic Credentials -->
+    <section class="section">
+      <div class="section-header reveal">
+        <h2>Academic Credentials</h2>
+        <span>02</span>
+      </div>
+
+      <div class="archive-list">
+        <!-- Degree -->
+        <div class="archive-item reveal">
+          <div class="archive-year">2020 — 2023</div>
+          <div>
+            <h3 class="archive-title">MD Forensic Medicine</h3>
+            <div class="archive-org">AIIMS Rajkot</div>
+          </div>
+          <p class="archive-desc">Advanced postgraduate residency focusing on forensic pathology, clinical forensic medicine, and medical jurisprudence. Extensive experience in complex autopsy and medicolegal casework.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Methodology -->
+    <section class="section">
+      <div class="section-header reveal">
+        <h2>Core Methodology</h2>
+        <span>03</span>
+      </div>
+
+      <div class="method-grid">
+        <div class="method-card reveal">
+          <div class="method-num">PHASE I</div>
+          <h3 class="method-title">Crime Scene Reconstruction</h3>
+          <p class="method-desc">Accurate spatial recreation of events based on physical evidence and bloodstain patterns, establishing an undeniable sequence of events.</p>
+        </div>
+        <div class="method-card reveal">
+          <div class="method-num">PHASE II</div>
+          <h3 class="method-title">Trace Evidence Analysis</h3>
+          <p class="method-desc">Microscopic examination of hair, fibers, gunshot residue, and soil samples to connect suspects definitively to the scene.</p>
+        </div>
+        <div class="method-card reveal">
+          <div class="method-num">PHASE III</div>
+          <h3 class="method-title">Pathology Integration</h3>
+          <p class="method-desc">Synthesizing autopsy findings and physiological evidence for rigorous case building, bridging the gap between biology and law.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer reveal">
+      <svg class="footer-graphic" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.3" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 10a2 2 0 0 0-2 2c0 1.02-.1 2.51-.26 4"/>
+        <path d="M14 13.12c0 2.38 0 6.38-1 8.88"/>
+        <path d="M17.29 21.02c.12-.6.43-2.3.5-3.02"/>
+        <path d="M2 12a10 10 0 0 1 18-6"/>
+        <path d="M2 16h.01"/>
+        <path d="M21.8 16c.2-2 .131-5.354 0-6"/>
+        <path d="M5 19.5C5.5 18 6 15 6 12a6 6 0 0 1 .34-2"/>
+        <path d="M8.65 22c.21-.66.45-1.32.57-2"/>
+        <path d="M9 6.8a6 6 0 0 1 9 5.2v2"/>
+      </svg>
+      <div class="footer-content">
+        <div class="label" style="justify-content: center;">Initiate Contact</div>
+        <a href="mailto:contact@arshshaikh.dev" class="contact-link cursor-hover">contact@arshshaikh.dev</a>
+        
+        <div class="back-to-top cursor-hover" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="19" x2="12" y2="5"></line>
+            <polyline points="5 12 12 5 19 12"></polyline>
+          </svg>
+          <span>Return To Top</span>
+        </div>
+      </div>
+    </footer>
+  </main>
+</div>
+</div>
+
+<script>
+// Custom Cursor Logic
+const cursor = document.getElementById('cursor');
+document.addEventListener('mousemove', (e) => {
+  cursor.style.left = e.clientX + 'px';
+  cursor.style.top = e.clientY + 'px';
+});
+
+document.querySelectorAll('a, button, .cursor-hover, .archive-item').forEach(el => {
+  el.addEventListener('mouseenter', () => cursor.classList.add('hovering'));
+  el.addEventListener('mouseleave', () => cursor.classList.remove('hovering'));
+});
+
+// Ribbon Unlock Logic
+const unlockSite = (e) => {
+  // Ignore upward scrolls
+  if (e && e.type === 'wheel' && e.deltaY < 0) return;
+
+  document.getElementById('ribbon-overlay').classList.add('open');
+  
+  // Wait for the 1.2s ribbon animation to complete before allowing page scroll
+  setTimeout(() => {
+    document.body.classList.remove('locked');
+  }, 1200);
+
+  window.removeEventListener('wheel', unlockSite);
+  window.removeEventListener('touchmove', unlockSite);
+  window.removeEventListener('keydown', handleKey);
+};
+
+const handleKey = (e) => {
+  if(e.key === 'ArrowDown' || e.key === ' ' || e.key === 'PageDown') {
+    unlockSite(e);
+  }
+};
+
+window.addEventListener('wheel', unlockSite);
+window.addEventListener('touchmove', unlockSite);
+window.addEventListener('keydown', handleKey);
+
+// Scroll Reveal Logic
+const observerOptions = { root: null, rootMargin: '0px', threshold: 0.15 };
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('in-view');
+      observer.unobserve(entry.target);
+    }
+  });
+}, observerOptions);
+
+// Add stagger delay to reveals
+document.querySelectorAll('.reveal').forEach((el, index) => {
+  // subtle staggering based on order if they appear together
+  el.style.transitionDelay = `${(index % 3) * 0.15}s`;
+  observer.observe(el);
+});
+</script>
+
+</body>
+</html>
